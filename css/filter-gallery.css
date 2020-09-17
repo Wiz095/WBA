@@ -1,0 +1,48 @@
+#gallery-title{
+	height: 35px;
+	font-size: 25px;
+	color: #3f8dbf;
+}
+#gallery-header-right{
+	float: right;
+	height: 35px;
+}
+
+#gallery-header-links ul:first-child{
+	padding-right: 200px;
+}
+
+.gallery-links .btn{
+	border: 1px solid #3f8dbf;
+	color: #3f8dbf;
+	-webkit-transition: background 0.5s;
+	-moz-transition: background 0.5s;
+	-o-transition: background 0.5s;
+	transition: background 0.5s;
+}
+.gallery-links .btn:hover {
+	background-color: rgba(63,141,191,1);
+	color: rgba(255,255,255,1);
+	cursor: pointer;
+}
+ .gallery-links-current .btn{
+	color: #FFFFFF;
+	background-color: rgba(63,141,191,1);
+}
+
+.gal img {
+	width: 300px;
+	margin-bottom: 10px;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	margin-left: 10px;
+}
+
+div #gal .gal .isotope{
+	position: fixed;
+	justify-content: center;
+	overflow: scroll;
+	width: 10000px;
+}
