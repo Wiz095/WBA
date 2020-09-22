@@ -217,8 +217,9 @@ nav ul {
 	height: 100%;
 	width: 190px;
 	margin-left: 50px;
-	background: #141e23;
+	background: transparent;
 	line-height: 50px;
+	animation: none;
 }
 nav li {
 	display: block;
@@ -247,10 +248,6 @@ nav li a:hover {
 	color: #fff;
 	background-color: #19252c;
 }
-nav li:first-child a.active,
-nav li:first-child a:hover {
-	border-radius: 10px 0 0 0;
-}
 
 
 /****************************************************************************************/
@@ -259,50 +256,50 @@ nav li:first-child a:hover {
 nav {
 	width: 20%;
 	height: 100%;
-	position: fixed;
+	/*position: fixed;*/
 	left: 0;
 	top: 0;
 	margin: 0;
-	background-color: #141e23;
+	background: transparent;
 	z-index: 1;
 	
 	/* starting point */
-	opacity: .3;
-	-webkit-transform: translate3d(5%,0,0)scale(.97);
-	-moz-transform: translate3d(5%,0,0)scale(.97);
-	transform: translate3d(5%,0,0)scale(.97);
+	opacity: 0;
+	-webkit-transform: translate3d(5%,0,0)scale(0);
+	-moz-transform: translate3d(5%,0,0)scale(0);
+	transform: translate3d(5%,0,0)scale(0);
 }
 
 /*Nav Expanding Open Effect*/
-nav.open {
+nav.open{
 	display: block;
 	opacity: 1;
 
 	-webkit-transform: translate3d(0,0,0)scale(1);
-	-webkit-animation: slideIn .35s ease-in-out;
+	-webkit-animation: slideIn .3s ease-in-out;
 	
 	
 	-moz-transform: translate3d(0,0,0)scale(1);
-	-moz-animation: slideIn .35s ease-in-out;
+	-moz-animation: slideIn .3s ease-in-out;
 	
 	transform: translate3d(0,0,0)scale(1);
-	animation: slideIn .35s ease-in-out;
+	animation: slideIn .3s ease-in-out;
 }
 @-webkit-keyframes slideIn {
 	0%       {
-				-webkit-transform: translate3d(5%,0,0)scale(.97);}
+				-webkit-transform: translate3d(1%,0,0)scale(.10);}
 	100%  {
 				-webkit-transform: translate3d(0,0,0)scale(1);}
 }
 @-moz-keyframes slideIn {
 	0%      {
-				-moz-transform: translate3d(5%,0,0)scale(.97);}
+				-moz-transform: translate3d(1%,0,0)scale(.10);}
 	100%  {
 				-moz-transform: translate3d(0,0,0)scale(1);}
 }
 @keyframes slideIn {
 	0%      {
-				transform: translate3d(5%,0,0)scale(.97);}
+				transform: translate3d(1%,0,0)scale(.10);}
 	100%  {
 				transform: translate3d(0,0,0)scale(1);}
 }
@@ -354,13 +351,13 @@ header.open,
 {   
   margin: 0;
 	-webkit-transform: translate3d(240px,0,0);
-	-webkit-animation: open .5s ease-in-out;
+	-webkit-animation: open .6s ease-in-out;
 	
 	-moz-transform: translate3d(240px,0,0);
-	-moz-animation: open .5s ease-in-out;
+	-moz-animation: open .6s ease-in-out;
 	
 	transform: translate3d(240px,0,0);
-	animation: open .5s ease-in-out;
+	animation: open .6s ease-in-out;
 }
 @-webkit-keyframes open {
 	0%      {-webkit-transform: translate3d(0,0,0);}
@@ -415,12 +412,14 @@ header.close,
 	padding: 0 0 0 0;
 	width: 100%;
 	height: auto;
-	background: white;
+	background-image: url("../img/banner.jpg");
+	background-position-y: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 600px;
 }
 .banner-title {
-	padding: 0 0 0 20px;
-	margin-top: -450px;
-	margin-bottom: 300px;
+	padding: 180px 0 0 20px;
 }
 .banner-title h1{
 	font-size: 40px;
@@ -430,31 +429,22 @@ header.close,
 	font: medium;
 	font-weight: 500;
 }
-.banner-section .placefiller img {
-	height: 600px;
-	width: 100%;
-	background-attachment: fixed;
-}
 
 /*****************************************************************************************/
 /* Responsive Banner      															     */
 /*****************************************************************************************/
 
-@media(max-width: 1080px){
-	.banner-title{
-		margin-bottom: 200px;
-	}
-}
 @media(max-width: 450px){
-   .banner-title{
-	   margin-bottom: 70px;
-	   margin-top: -280px;
-   }
+
+	.banner-section{
+		background-position-x: center;
+		height: 400px;
+	}
+	.banner-title{
+		padding: 120px 0 0 20px;
+	}
    .banner-title h1{
 	   font-size: 30px;
-   }
-   .banner-section .placefiller img{
-	   height: 430px !important;
    }
    .dot{
 	   width: 10px;
@@ -468,27 +458,7 @@ header.close,
 	   border-bottom: 2px solid #3f8dbf;
    }
 }
-@media(max-width: 350px){
-	.banner-title{
-		margin-bottom: 30px;
-	}
-}
-@media(max-width: 600px){
-	 .banner-title{
-		 margin-bottom: 90px;
-	 }
-	.banner-title{
-		margin-top: -320px;
-	}
-	.banner-section .placefiller img{
-		height: 500px;
-	}
-}
-@media(max-width: 565px){
-	header h1{
-		font-size: 22px;
-	}
-}
+
 @media(max-width: 409px){
 	header h1{
 		font-size: 17px;
@@ -505,26 +475,18 @@ header.close,
 .topbtn{
 	float: right;
 	display: none;
-	margin: 15px 20px 0 0;
 }
 @media(max-width: 750px){
 	.topbtn{
 		float: right;
-		margin: 15px 20px 0 0;
 		font-size: medium;
 		line-height: 40px;
-		width: 120px;
+		width: 110px;
 		height: 48px;
-	}
-}
-@media(min-width: 655px){
-	.topbtn{
-		display: block;
 	}
 }
 @media(max-width: 655px){
 	#book{
-		margin-top: 143px;
 		display: block;
 	}
 
@@ -532,8 +494,8 @@ header.close,
 		width: 100%;
 		background: linear-gradient(220deg, #403e55, #3f8dbf 180%);
 		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-		height: 100px; 
-		padding: 30px 20px 0 0;
+		height: 90px; 
+		padding: 20px 20px 10px 0;
 	}
 	.book .btn{
 		float: right;
@@ -546,31 +508,7 @@ header.close,
 		display: none;
 	}
 }
-@media(min-width: 321px){
-	#book{
-		margin-top: 150px;
-	}
-}
-@media(min-width: 427px){
-	#book{
-		margin-top: 190px;
-	}
-}
-@media(min-width: 451px){
-	#book{
-		margin-top: 110px;
-	}
-}
-@media(min-width: 563px){
-	#book{
-		margin-top: 168px;
-	}
-}
-@media(min-width: 601px){
-	#book{
-		margin-top: 295px;
-	}
-}
+
 
 /*****************************************************************************************/
 /*  About  Section    														   			 */
@@ -775,72 +713,6 @@ header.close,
 .card .btn{
 	  margin-top: 20px;
 }
-@media(max-width: 480px){
-	.tours .tour-title{
-		padding: 0 40px 30px 20px;
-	}
-	.tours{
-		overflow: scroll hidden;
-		width: 100%;
-		padding-left: 0;
-		padding-right: 0;
-	}
-	.tours .cards{
-		grid-template-columns: repeat(4, 1fr);
-		width: 100%;
-		grid-gap: 20px;
-		overflow: scroll hidden;
-		padding: 20px 0 0 550px;
-		height: 260px;
-		margin: 0;
-	
-	}
-	.card{
-		height: 190px; 
-		width: 250px;
-		border-radius: 25px;
-		transform: none;
-		box-shadow: 0px 10px 20px 0px #ccc5eb; 
-		background:#403e55;
-		padding: 0;
-		margin: 0;
-	}
-	.card img{
-		display: none;
-	}
-	.card h1{
-		font-weight: 900;
-		font-size: 30px;
-		padding: 0;
-		text-align: center;
-		color: #ffffff;
-		line-height: 190px;
-	}
-	.card .btn{
-		display: none;
-	} 
-	.card div{
-		padding: 0 0 0 0;
-		border-radius: 15px 2px;
-	}
-	div.card:hover{
-		transform: none
-	  }
-	.tours .cards p{
-		display: none;
-	}
-	.tours .cards .card2{
-		display: block;
-		box-shadow: none;
-		background: #ffffff;
-		border: none;
-		height: 345px;
-
-	}
-	.break{
-		display: block;
-	}
-}
 @media(max-width: 450px){
 	
 	.tours {
@@ -848,6 +720,12 @@ header.close,
 	}
 	.tour-title span .underline{
 		width: 250px;
+	}
+	.tour-title{
+	  padding: 0 0 30px 30px;
+	}
+	.card h1{
+	  font-size: 18px;
 	}
 }
 @media(min-width: 481px){
@@ -863,10 +741,7 @@ header.close,
 		padding: 120px 0 200px 10px;
 	}
 	.tours .cards{
-		grid-template-columns: repeat(4, 1fr);
-		grid-gap: 20px;
-		overflow: scroll hidden;
-		scrollbar-track-color: white;
+		grid-template-columns: repeat(1, 1fr);
 		padding: 60px 0 0 700px;
 	}
 	.card{
@@ -880,6 +755,7 @@ header.close,
 	.card h1{
 		text-align: left;;
 		color: #000000;
+		font-size: 18px;
 	}
 	.card div{
 		padding: 0 5px 0 5px;
@@ -1007,17 +883,17 @@ header.close,
 
 .gallery-area, .gallery{
 	width: 100%;
-	background:#403e55;
+	background:#2a4457;
 	margin: 0;
 	padding: 100px 100px 100px 100px;
 }
 .header-text{
-	background: #403e55;
+	background: #2a4457;
 	height: 100px;
 	width: 100%;
 }
 .gal {
-	background: #403e55;
+	background: #123652;
 }	
 
 #gallery-links-header li{
@@ -1033,7 +909,7 @@ header.close,
 }
 
 .mainmenu {
-	background-color: #403e55;
+	background-color: #2a4457;
 	}
 
 
@@ -1060,7 +936,7 @@ header.close,
 
 
 	.hide .gal2{
-		background: #403e55;
+		background: #2a4457;
 		display: grid;
 	}
 	.gal2 ul{
@@ -1165,9 +1041,9 @@ header.close,
 /*****************************************************************************************/
 /* Footer Section        																 */
 /*****************************************************************************************/
-.footer-section{
-	background: #222222;
+footer{
+	background: #000;
 	border: 5px dashed rgba(190, 196, 202, 0.9);
-	height: 200px;
+	height: 300px;
 	width: 100%;
 }
