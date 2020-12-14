@@ -40,18 +40,21 @@ $(function () {
         }
     })
 
-
   // Show and hide logo/title on header
-    win.on("scroll", () => {
-      if (win.scrollTop() > 40) {
+  
+    function change_log_title(){
+      win.on("scroll", () => {
+        if (win.scrollTop() > 40) {
               $('.header-icon').css('display','block');
-              $('.header-title').css('display','none');
+              $('.h1').css('display','none');
       } else {
         $('.header-icon').css('display', 'none');
-        $('.header-title').show('fast');
+        $('.h1').show('fast');
       }
-    });
- 
+    })
+    
+    }
+    
  // add remove header/banner booking btn on display size   
     
   function book_hide_show(){
@@ -62,7 +65,7 @@ $(function () {
   function book_scroll(){
       win.on("scroll", () => {
        if (win.scrollTop() > 400) {
-              $('.header-btn').css('display','block');
+              $('.header-btn').css('display','block').css('jusify-content','center').css('align-items','center');
               $('.banner-btn').css('display','none');
       } else {
           book_hide_show();
@@ -184,5 +187,6 @@ $(function () {
       });
       
     booking_btn();
+    change_log_title();
       
 });
