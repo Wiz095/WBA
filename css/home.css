@@ -41,8 +41,8 @@ body {
 	width: 150px;
 	height: 50px;
 	background: transparent;
-	border: 2px solid #3f8dbf;
-	color:#3f8dbf; 
+	border: 2px solid #26A96C;
+	color:#26A96C; 
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -52,7 +52,7 @@ body {
 	transition: all .5s ease-in-out;
 }
 .btn:hover{
-	background: #3f8dbf;
+	background: #26A96C;
 	color: white;
 }
 a {
@@ -289,8 +289,11 @@ header {
 .header-btn{
 	display: none;
 	border-radius: 24px;
-	margin-top: 15px;
-	width: 170px;
+	margin-top: -10px;
+	margin-right: 10px;
+	line-height: 50px;
+	text-align: center;
+	width: 160px;
 	height: 55px;
 }
 
@@ -306,7 +309,7 @@ header {
 	color: rgb(0, 0, 0);
 }
 header .h1 {
-	color: #3f8dbf;
+	color: #26A96C;
 	text-align: left;
 	font-size: 28px;
 	line-height: 80px;
@@ -325,7 +328,7 @@ header .h1 {
 .burger li {
 	width: 30px;
 	height: 4px;
-	background-color: #3f8dbf;
+	background-color: #387D7A;
 	border-radius: 3px;
 	margin: 5px 0;
 	transition: all 0.3s ease-in-out;
@@ -383,7 +386,7 @@ nav li a:hover:after{
 }
 
 .linkchange:after{
-	background: #3f8dbf;
+	background: #26A96C;
 }
 
 /****************************************************************************************/
@@ -448,7 +451,7 @@ header .h1 {
 	text-align: center;
 	float: left;
 	display: block;
-	color:#3f8dbf;
+	color:#26A96C;
 	font-size: 16px;
 	line-height: 70px;
 	padding-left: 70px;
@@ -670,9 +673,9 @@ header.close,
 	font-size: 20px;
 	margin-top: 20px;  
 	border-radius: 24px;
-	border: 1px solid #3f8dbf;
+	border: 1px solid #26A96C;
 	margin-left: 15px;
-	color: #3f8dbf;
+	color: #26A96C;
 	transition: all .3s ease-in-out;
 }
 
@@ -680,7 +683,7 @@ header.close,
 .banner-btn:hover{
 	background: transparent;
 	word-spacing: 2px;
-	color: #3f8dbf;
+	color: #26A96C;
 	margin-top: 17px;
 }
 .banner-section{
@@ -703,14 +706,14 @@ header.close,
 	font-weight: 900;
 	letter-spacing: 3px;
 	text-transform: uppercase;
-	color: #ffffff;
+	color: #32936F;
 }
 .banner-title h4{
 	padding: 20px 0 0px 0;
 	font-size: 18px;
 	letter-spacing: 2px;
 	font-weight: 500;
-	color: #ffffff;
+	color: #FEFCFB;
 }
 
 /*****************************************************************************************/
@@ -749,7 +752,7 @@ header.close,
 	header h1{
 		font-size: 17px;
 	}
-	
+}
 	
 /*****************************************************************************************/
 /*  About  Section    														   			 */
@@ -757,7 +760,7 @@ header.close,
 .about-us{
 	font-size: 50px;
 	font-weight: 700;
-	color: black;
+	color: #395E66;
 	background: rgb(255, 255, 255);
 }
 .about-us{
@@ -769,7 +772,7 @@ header.close,
 }
 .text-cont{
 	margin: 100px 0 0 80px;
-	border: 3.5px solid #403e55;
+	border: 3.5px solid #97D8C4;
 	height: 480px;
 	width: 630px;
 }
@@ -781,7 +784,7 @@ header.close,
 }
 .img-cont{
 	margin: 150px 0 100px -120px;
-	/* border: 1px solid black; */
+	/* border: 1px solid #395E66; */
 	background: rgb(255, 255, 255);
 }
 .about-us p{
@@ -796,7 +799,7 @@ header.close,
 	margin: 50px 0 0 40px;
 	width: 500px;
 	height: 450px;
-    box-shadow: -20px 15px 0 rgb(49, 53, 34);
+    box-shadow: -20px 15px 0 #387D7A;
 }
 .about-us div img:before {
     position: absolute;
@@ -817,7 +820,7 @@ header.close,
 	margin-top: 100px ; 
 	display: flex;
 	align-items: center;
-	color: #3f8dbf; 
+	color: #26A96C; 
 	line-height: 60px;
 }
 
@@ -860,14 +863,14 @@ header.close,
 		display: block;
 	}
 	.about-us .btn{
-		border: 2px solid #3f8dbf ;
-		color: #3f8dbf ;
+		border: 2px solid #26A96C ;
+		color: #26A96C ;
 		box-shadow: none ;
 		margin-top: 20px;
 		transition: all .5s ease-in-out;
 	}
 	.about-us .btn:hover{
-		background: #3f8dbf;
+		background: #26A96C;
 		color: #ffffff;
 	}
 	.about-us p{
@@ -902,12 +905,12 @@ header.close,
 	}
 }
 /*****************************************************************************************/
-/*  Cards  Section   														   			 */
+/*  Cards  Section   					                                									   			 */
 /*****************************************************************************************/
 .tour-title span{
 	margin-top: 200px;
 	text-align: center;
-	color: black;
+	color: #395E66;
 	font-size: 30px;
 	font-weight: 900;
 	width: 284px;
@@ -968,21 +971,21 @@ header.close,
 	line-height: 50px;
 	text-align: center;
 	border-radius: 20px;
-	background: #3f8dbf;
+	background: #26A96C;
 	color: #ffffff;
 	margin: auto;
 	transition: all .4s ease-in-out;
 
 }
 .display-card .card-btn:hover{
-	border: 2px solid #3f8dbf;
-	color: #3f8dbf;
+	border: 2px solid #26A96C;
+	color: #26A96C;
 	background: transparent;
 }
 @media(max-width: 450px){
 	
 	.tour-title{
-	  padding: 0 0 30px 20px;
+	  padding: 0 20px 30px 20px;
 	}
 	.card h1{
 	  font-size: 18px;
@@ -990,23 +993,16 @@ header.close,
 }
 @media(min-width: 481px){
 
-	.tour-title{
-		padding-left: 20px;
-	}
-	.tours .cards{
-		padding: 0 0 0 500px;
-	}
 	.tours {
 		width: 100%;
-		padding: 120px 0 200px 10px;
+		padding: 30px;
 	}
 	.tours .cards{
 		grid-template-columns: repeat(1, 1fr);
-		padding: 60px 0 0 700px;
 	}
 	.card{
-		height: 345px;
-		width: 360px;
+	  height: 300px;
+	  width: 250px;
 		transform: none;
 		box-shadow: 0px 10px 20px -2px #dddcdc; 
 		padding: 10px 10px 0 10px;
@@ -1023,14 +1019,9 @@ header.close,
 	div.card:hover{
 		transform: none
 	  }
-	.tours .cards p{
-		display: none;
-	}
 	.tours .cards .card2{
 		display: block;
 		box-shadow: none;
-		height: 345px;
-		width: 200px;
 	}
 	.break{
 		display: block;
@@ -1163,7 +1154,7 @@ header.close,
 @media (max-width: 700px){
 	.gal-container{
 	  height: 640px;
-		padding: 100px 0 0 0;
+		padding: 20px 0 10px 0;
 	}
 	.slider{
 	  padding: 0 15px 0 15px;
@@ -1243,9 +1234,10 @@ header.close,
 /* Footer Section        																 */
 /*****************************************************************************************/
 footer{
-	background: #3f8dbf;
+	background: #26A96C;
 	height: 300px;
 	width: 100%;
+	margin-top: 40px;
 }
 
 .quick-links ul{
