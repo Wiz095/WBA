@@ -41,7 +41,7 @@
 				<li><a href="about.html">About</a></li>
 				<li><a href="contact.html">Contact</a></li>
 				<li><span class="header-btn-cont">
-						<div class="btn header-btn">
+						<div class="btn header-btn" id="header-btn">
 							<strong>Book A Tour</strong>
 						</div>
 					</span>
@@ -363,47 +363,13 @@
                 <input type="submit" id="send" name="send" value="Send" />
             </div>
         </form>
-        
-        <?php
-if (! empty($_POST["send"])) {
-    $name = filter_var($_POST["userName"], FILTER_SANITIZE_STRING);
-    $email = filter_var($_POST["userEmail"], FILTER_SANITIZE_EMAIL);
-    $subject = filter_var($_POST["subject"], FILTER_SANITIZE_STRING);
-    $message = filter_var($_POST["message"], FILTER_SANITIZE_STRING);
-    
-    $toEmail ="wisman.tg@gmail.com";
-    $mailHeaders = "From: " . $name . "<" . $email . ">\r\n";
-    
-    if (! mail($toEmail, $subject, $message, $mailHeaders)) {
-?>
-    <div id="success">Your contact information is received successfully!</div>
-
-<?php
-    }
-}
-?>
     </div>
 
 
 	<!-- Scripts -->
 	<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+	
 	<script type="text/javascript">
-
-  //modal booking form
-      // booking form  popup
-    function modal_pop(){
-    $("#contact-popup").show();
-  }
-   
-   $("#header-btn").click(function () {
-        modal_pop();
-    });
-    
-    $("#header-btn").click(function () {
-        modal_pop();
-    });
-    
-    
   $(document).ready(function(){
       	  
     //Contact Form validation on click event
