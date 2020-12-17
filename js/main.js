@@ -39,6 +39,8 @@ $(function () {
             remove()
         }
     })
+    
+
 
   // Show and hide logo/title on header
   
@@ -80,6 +82,16 @@ $(function () {
       book_hide_show();
     };
   }
+
+      // booking form  popup
+   
+   $("#header-btn").click(function () {
+        $('#contact-popup').show('slow')
+    });
+    
+    $("#banner-btn").click(function () {
+        $('#contact-popup').show('slow')
+    });
 
 
  $('.card-btn').click(()=>{
