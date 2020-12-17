@@ -65,7 +65,7 @@ $(function () {
   function book_scroll(){
       win.on("scroll", () => {
        if (win.scrollTop() > 400) {
-              $('.header-btn').css('display','block').css('jusify-content','center').css('align-items','center');
+              $('.header-btn').css('display','block');
               $('.banner-btn').css('display','none');
       } else {
           book_hide_show();
@@ -80,33 +80,6 @@ $(function () {
       book_hide_show();
     };
   }
-  
-   
-   
-
-  //Show and Hide Modal
-  // Add blur/open class
-
-    function addblur(){
-      if ($('.modal').hasClass('open')) {
-        $('.container').addClass('blur');
-      }
-    };
-
-    $('#banner-btn').click(function () {
-      $('.modal').addClass('open');
-     addblur();
-    });
-
-    $('.header-btn').click( function() {
-      $('.modal').addClass('open');
-      addblur()
-    });
-  
-    $('.close').click(function () {
-      $('.modal').removeClass('open');
-      $('.container').removeClass('blur');
-    });
 
 
  $('.card-btn').click(()=>{
@@ -185,6 +158,10 @@ $(function () {
         ]
 
       });
+      
+      
+    // FLoating Label inputs
+    
       
     booking_btn();
     change_log_title();
