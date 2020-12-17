@@ -1,16 +1,18 @@
 <?php
-if(!empty($_POST["send"])) {
-	$name = $_POST["userName"];
-	$email = $_POST["userEmail"];
-	$subject = $_POST["subject"];
-	$content = $_POST["content"];
+if (! empty($_POST["send"])) {
+    $name = filter_var($_POST["userName"], FILTER_SANITIZE_STRING);
+    $email = filter_var($_POST["userEmail"], FILTER_SANITIZE_EMAIL);
+    $subject = filter_var($_POST["subject"], FILTER_SANITIZE_STRING);
+    $message = filter_var($_POST["message"], FILTER_SANITIZE_STRING);
+    
+    $toEmail ="wisman.tg@gmail.com";
+    $mailHeaders = "From: " . $name . "<" . $email . ">\r\n";
+    
+    if (! mail($toEmail, $subject, $message, $mailHeaders)) {
+?>
+    <div id="success">Your contact information is received successfully!</div>
 
-	$toEmail = "wisman.tg@gmail.com";
-	$mailHeaders = "From: " . $name . "<". $email .">\r\n";
-	if(mail($toEmail, $subject, $content, $mailHeaders)) {
-	    $message = "Your tour was booked successfully.";
-	    $type = "success";
-	}
+<?php
+    }
 }
-require_once "index.php";
 ?>
