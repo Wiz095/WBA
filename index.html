@@ -315,55 +315,131 @@
 		</div>
 	</div>
 				      <!--Contact Form-->
-  <div id="contact-popup">
-    <form class="contact-form" action="mail.php" id="contact-form"
-            method="post" enctype="multipart/form-data">
-      <h1>Contact Us</h1>
-            <div>
-                <div>
-                    <label>Name: </label><span id="userName-info"
-                        class="info"></span>
-                </div>
-                <div>
-                    <input type="text" id="userName" name="userName"
-                        class="inputBox" />
-                </div>
-            </div>
-            <div>
-                <div>
-                    <label>Email: </label><span id="userEmail-info"
-                        class="info"></span>
-                </div>
-                <div>
-                    <input type="text" id="userEmail" name="userEmail"
-                        class="inputBox" />
-                </div>
-            </div>
-            <div>
-                <div>
-                    <label>Subject: </label><span id="subject-info"
-                        class="info"></span>
-                </div>
-                <div>
-                    <input type="text" id="subject" name="subject"
-                        class="inputBox" />
-                </div>
-            </div>
-            <div>
-                <div>
-                    <label>Message: </label><span id="userMessage-info"
-                        class="info"></span>
-                </div>
-                <div>
-                    <textarea id="message" name="message"
-                        class="inputBox"></textarea>
-                </div>
-            </div>
-            <div>
-                <input type="submit" id="send" name="send" value="Send" />
-            </div>
-        </form>
+				      
+		<div class="modal">
+		<div class="content">
+			<div class="modal-content">
+			  <div>
+			    <span class="form-title">Book You Tour</span>
+			  </div>
+				<div class="form-container">
+					<form action="mail.php" method="POST" id="input-container" enctype="multipart/form-data">
+						
+	  <center>
+      <div class="floating-form">
+    <div class="floating-label">      
+      <input class="floating-input" type="text" placeholder="Wisman Guevara">
+      <span class="highlight"></span>
+      <label class="float-label">Name</label>
     </div>
+    <div class="floating-label">      
+      <input class="floating-input" type="email" placeholder="wildlandbelize@gmail.com">
+      <span class="highlight"></span>
+      <label class="float-label">Email</label>
+    </div>
+
+    <div class="floating-label">      
+      <input class="floating-input" type="text" onclick="(this.type='time')" placeholder="12:30pm">
+      <span class="highlight"></span>
+      <label class="float-label">Time</label>
+    </div>
+
+    <div class="floating-label">      
+      <input class="floating-input" type="text" onclick="(this.type='date')" placeholder="11/12/2020">
+      <span class="highlight"></span>
+      <label class="float-label">Date</label>
+    </div>
+    <div class="floating-label">  
+      <select class="floating-select" onclick="this.setAttribute('value', this.value);" value="">
+        <option selected disabled hidden></option>
+        <option value="Kayaking">Kayaking</option>
+        <option value="Cave Tubing">Cave Tubing</option>
+        <option value="Cave Exploring">Cave Exploring</option>
+        <option value="Crystal Cave">Crystal Cave</option>
+        <option value="Bird Watching">Bird Watching</option>
+      </select>
+      <span class="highlight"></span>
+      <label class="float-label">Tour</label>
+    </div>
+    <div class="floating-label">  
+      <select class="floating-select" onclick="this.setAttribute('value', this.value);" value="">
+        <option disabled selected hidden></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+      <span class="highlight"></span>
+      <label class="float-label">Number of Tourists</label>
+    </div>
+ 
+</div>
+  </center>
+  
+						<div class="close">Cancel</div>
+			      <button class="submit-btn" name="submit" type="submit">Book Now</button>
+			      
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+				      
+  <!--<div id="contact-popup">-->
+  <!--  <form class="contact-form" action="mail.php" id="contact-form"-->
+  <!--          method="post" enctype="multipart/form-data">-->
+  <!--    <h1>Contact Us</h1>-->
+  <!--          <div>-->
+  <!--              <div>-->
+  <!--                  <label>Name: </label><span id="userName-info"-->
+  <!--                      class="info"></span>-->
+  <!--              </div>-->
+  <!--              <div>-->
+  <!--                  <input type="text" id="userName" name="userName"-->
+  <!--                      class="inputBox" />-->
+  <!--              </div>-->
+  <!--          </div>-->
+  <!--          <div>-->
+  <!--              <div>-->
+  <!--                  <label>Email: </label><span id="userEmail-info"-->
+  <!--                      class="info"></span>-->
+  <!--              </div>-->
+  <!--              <div>-->
+  <!--                  <input type="text" id="userEmail" name="userEmail"-->
+  <!--                      class="inputBox" />-->
+  <!--              </div>-->
+  <!--          </div>-->
+  <!--          <div>-->
+  <!--              <div>-->
+  <!--                  <label>Subject: </label><span id="subject-info"-->
+  <!--                      class="info"></span>-->
+  <!--              </div>-->
+  <!--              <div>-->
+  <!--                  <input type="text" id="subject" name="subject"-->
+  <!--                      class="inputBox" />-->
+  <!--              </div>-->
+  <!--          </div>-->
+  <!--          <div>-->
+  <!--              <div>-->
+  <!--                  <label>Message: </label><span id="userMessage-info"-->
+  <!--                      class="info"></span>-->
+  <!--              </div>-->
+  <!--              <div>-->
+  <!--                  <textarea id="message" name="message"-->
+  <!--                      class="inputBox"></textarea>-->
+  <!--              </div>-->
+  <!--          </div>-->
+  <!--          <div>-->
+  <!--              <input type="submit" id="send" name="send" value="Send" />-->
+  <!--          </div>-->
+  <!--      </form>-->
+  <!--  </div>-->
+
+  
+  
+
 
 
 	<!-- Scripts -->
@@ -373,6 +449,7 @@
   $(document).ready(function(){
       	  
     //Contact Form validation on click event
+    
     $("#contact-form").on("submit", function () {
         var valid = true;
         $(".info").html("");

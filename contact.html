@@ -31,7 +31,7 @@
 			</ul>
 			<span class="h1" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="500">Wildland
 				Belize Adventures</span>
-			<dpan class="header-icon"><img src="img/main.jpg" alt=""></span>
+			<span class="header-icon"><img src="img/main.jpg" alt=""></span>
 		</header>
 		<nav class="slide">
 			<ul data-aos="fade-up" data-aos-anchor-placement="bottom-center" data-aos-duration="1000">
@@ -55,27 +55,37 @@
 		    <div class="contact-title">
 		      <h1>Contact Us</h1>
 		    </div>
-		    <div class="form-container">
-		       <form action="" method="post" accept-charset="utf-8">
-		       <div class="grid-inputs">
-		          <div class="name-cont">
-		          <input type="text" name="name" id="name"/>
-		          <label for="">Enter Name</label>
-		        </div>
-            <div class="email-cont">
-              <input type="email" name="email" id="email"/>
-              <label for="">Enter Email</label>
-            </div>		        
-		       </div>
-            <div class="message-cont">
-              <textarea name="message" placeholder="Enter Message..."></textarea>
-              <!--<label for="">Enter Message...</label>-->
-            </div>
-            <div>
-              <input type="submit" name="submit-btn" id="submit-btn" value="Send" />
-            </div>
-		    </form>
-		    </div>
+			  <center>
+      <div class="floating-form">
+        
+    <form action="" method="POST" id="contact-form">
+      <div class="grid-inputs">
+        <div class="floating-label">      
+      <input class="floating-input" type="text" placeholder="Wisman Guevara">
+      <span class="highlight"></span>
+      <label class="float-label">Name</label>
+    </div>
+    <div class="floating-label">      
+      <input class="floating-input" type="email" placeholder="wildlandbelize@gmail.com">
+      <span class="highlight"></span>
+      <label class="float-label">Email</label>
+    </div>
+    </div>
+
+    <div class="textarea-cont">
+      <div class="floating-label">
+        <label class="message-label">Message</label>
+      <textarea placeholder="Message here..." name="message" id="textarea"></textarea>
+    </div>
+    </div>
+    
+    <div class="btn-submit">
+        <input type="submit" name="submit-btn" id="submit-btn" value="Send" />
+    </div>
+    </form>
+ 
+</div>
+  </center>
 		 </div>
 		</div>
 	</div>
@@ -86,7 +96,7 @@
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-	<script>
+	<script type="text/javascript">
 		AOS.init();
 	</script>  
 	  
