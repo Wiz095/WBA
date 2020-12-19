@@ -16,7 +16,17 @@ $(function () {
     //     }
     // }
 
-
+  $(document).ready(function(){  
+                $('#textarea').focus(function(){  
+                     $(this).animate({"height":"150px",}, "fast");  
+                      $('.message-label').css({"color":"#395e66"});
+                });  
+                $('#textarea').blur(function(){  
+                     $(this).animate({"height": "100px",}, "fast" );  
+                      $('.message-label').css('color','lightgrey')
+                });  
+           });  
+           
     // add or remove class to header
     function remove() {
         nav.removeClass("scrolled");
@@ -83,14 +93,29 @@ $(function () {
     };
   }
 
-      // booking form  popup
-   
-   $("#header-btn").click(function () {
-        $('#contact-popup').show('slow')
+
+  //Show and Hide Modal
+  // Add blur/open class
+
+    function addblur(){
+      if ($('.modal').hasClass('open')) {
+        $('.container').addClass('blur');
+      }
+    };
+
+    $('#banner-btn').click(function () {
+      $('.modal').addClass('open');
+     addblur();
     });
-    
-    $("#banner-btn").click(function () {
-        $('#contact-popup').show('slow')
+
+    $('.header-btn').click( function() {
+      $('.modal').addClass('open');
+      addblur()
+    });
+  
+    $('.close').click(function () {
+      $('.modal').removeClass('open');
+      $('.container').removeClass('blur');
     });
 
 
