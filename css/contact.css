@@ -1,7 +1,9 @@
 nav li a {
 	color: #395e66;
 }
-
+.container{
+  background: #ffffff;
+}
 .contact-container{
   height: auto;
   width: 100%;
@@ -21,57 +23,51 @@ nav li a {
   font-weight: 600;
   letter-spacing: 1px;
 }
-.from-containner{
-  background: white;
-}
-
-form{
-  margin: 0 8rem 0 8rem;
-}
 .grid-inputs{
   display: grid;
   grid-template-columns: repeat(2,1fr);
   grid-column-gap: 4rem;
+  margin: 3rem 8rem 0 8rem;
 }
-.name-cont, .email-cont{
-  width: 100%;
-  border-bottom: 2px solid lightgrey;
-  display: grid;
-  grid-template-columns: repeat(1,1f);
-  justify-content: left;
+.floating-form{
+  background: #ffffff;
 }
-
-.name-cont input, .email-cont input{
-  width: 100%;
-  font-size: 20px;
-  height: 50px;
-  text-align: center;
-  outline: none;
-  border: none;
-  background: transparent;
-}
-form label{
-  font-size: 20px;
-  padding: 0 0 10px 0;
-  font-weight: 500;
-  color: grey;
-}
-.message-cont{
-  width: 100%;
+.floating-label{
   height: auto;
-  margin-top: 3rem;
 }
-.message-cont textarea{
-  width: 100%;
-  height: 15rem;
-  border-radius: 10px;
-  outline: none;
-  border: none;
-  background: whitesmoke;
+.floating-label label{
+  float: left;
+  font-size: 15px;
+  color: lightgrey;
+}
+.textarea-cont{
+  margin: 3rem 8rem 0 8rem;
+  height: auto;
   
 }
+textarea{
+  width: 100%;
+  height: 100px;
+  outline: none;
+  overflow: hidden;
+  resize: none;
+  border-bottom: 2px solid lightgrey;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+textarea:focus{
+  border-bottom: 2px solid #395e66;
+}
+.btn-submit{
+  height: auto;
+  background: white;
+}
+
 #submit-btn{
-  margin-top: 3rem;
+  float: left;
+  margin: 3rem 0 0 8rem;
   background: #26a96c;
   width: 130px;
   height: 40px;
