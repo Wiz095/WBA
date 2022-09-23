@@ -1,0 +1,295 @@
+/*****************************************************************************************/
+/*  Banner  Section    														   			 */
+/*****************************************************************************************/
+.banner-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20em 15rem 20em 15rem;
+    background: rgb(119, 146, 155);
+	background-image: linear-gradient( rgba(18, 28, 39, 0.9), rgba(18, 28, 39, 0.9)), url("../img/11.jpg");
+	background-position-y: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.banner-container h1 {
+  color: #ffffff;
+  font-size: 4em;
+  font-weight: 900;
+}
+.banner-container .banner-subtitle p{
+    padding: 32px 0 70px 0;
+    color: #ffffff;
+    font-size: 2em;
+    line-height: 40px;
+}
+@media(max-width:1200px){
+    .banner-container {
+        justify-content: center;
+        padding: 20em 5rem 20em 5rem;
+    }
+}
+
+
+/*****************************************************************************************/
+/*  About  Section    														   			 */
+/*****************************************************************************************/
+.about-us{
+	padding: 10px 50px 0 50px;
+	height: auto;
+	display: grid;
+	grid-gap: 2rem;
+	grid-template-columns: repeat(2, 1fr);
+    font-size: 50px;
+	font-weight: 700;
+	color: #395E66;
+	background: rgb(255, 255, 255);
+    position: relative;
+    left: 35px;
+}
+.about-us .text-cont{
+	margin: 100px 0 0 80px;
+	border: 3.5px solid #97D8C4;
+	height: 400px;
+	width: 590px;
+}
+.about-us .text-cont2{
+	width: 100%;
+	padding: 60px 25px 25px 25px;
+	display: block;
+	line-height: 35px;
+}
+.about-us .title1 h5{
+    font-size: 1em;
+}
+.about-us .img-cont{
+	margin: 150px 0 100px -120px;
+	background: rgb(255, 255, 255);
+}
+.about-us p{
+	padding: 30px 60px 0 0;
+}
+.about-us div img{
+	position: relative;
+	margin: 50px 0 0 40px;
+	height: 400px;
+	width: 590px;
+    box-shadow: -20px 15px 0 #72ac9b;
+}
+.about-us div img:before {
+    position: absolute;
+    left: -15px;
+    bottom: -15px;
+    height: 95%;
+    width: 98%;
+    background: #333132;
+    content: "";
+}
+.about-link{
+    display: flex;
+}
+.about-us .about-btn{
+	margin-top: 55px;
+    margin-left: -5px;
+}
+
+@media(max-width:1500px){
+    .about-us .text-cont, .about-us div img {
+        height: 300px;
+        width: 400px;
+    }
+    .about-us .text-cont2 {
+        line-height: 1px;
+    }
+    .about-us .text-cont {
+        margin: 100px 0 0 70px;
+    }
+    .about-us p {
+        line-height: 17px;
+        font-size: 14px;
+    }
+    .about-us .about-btn{
+        margin-top: 95px;
+    }
+}
+@media(max-width:992px){
+    .about-us{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 50px;
+        padding: 10px 10px 0 10px;
+        grid-gap: 0;
+        left: 0;
+        right: 0;
+    }
+    .about-us div img {
+        box-shadow: none;
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+    .about-us .text-cont,
+    .about-us .text-cont2,
+    .about-us .img-cont,
+    .about-us div img {
+        margin: 0;
+        width: 100%;
+        border: none;
+    }
+    .width-container{
+        display: block;
+    }
+    .about-us .about-btn{
+        margin: 0 0 0 24px;
+    }
+    .about-us .text-cont2{
+        padding: 60px 0 25px 25px;
+    }
+    .about-us p {
+    padding: 30px 0 0 0;
+}
+}
+
+@media(max-width:768px){
+    .banner-container {
+        padding: 10em 5rem 10em 5rem;
+    }
+}
+
+/*****************************************************************************************/
+/*  Cards  Section   					                                									   			 */
+/*****************************************************************************************/
+
+#tours{
+    background-color: #172a30;;
+}
+
+.tour-title{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+    
+}
+
+.tour-title .title{
+	text-align: center;
+	color: #395E66;
+	font-size: 2.5rem;
+	font-weight: 900;
+}
+.tours{
+	background: transparent;
+	padding: 100px 80px 100px 80px;
+}
+
+.tours .cards {
+    display: grid;
+    gap: 3rem;
+    text-align: center;
+	grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    padding-bottom: 3rem;
+}
+.card{
+    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+	transition: .3s ease-out !important;
+}
+.card:hover{
+    transform: translateY(-20px) !important;
+    box-shadow: 0px 27px 26px -20px  #356657;
+}
+
+.card h1{
+    color: rgb(47, 47, 49);
+    text-align: left;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 10px 0 0 0;
+    letter-spacing: 1px;
+}
+.card img{
+	width: 100%;
+	height: 160px;
+	padding: 0;
+}
+.card-content {
+    padding: 0 10px;
+}
+.card p {
+    font-size: 13px;
+    font-weight: 200;
+    color: rgb(78, 78, 78);
+	padding: 10px 0;
+	text-align: left;
+    line-height: 26px;
+	letter-spacing: .5px;
+}
+.card .btn{
+    margin-bottom: 10px;
+}
+/* Toggle to show list of tours available */
+.cont-cards{
+	display: none;
+}
+
+.display-card{
+	width: 100%;
+	background: none;
+	display: flex;
+    justify-content: center;
+	padding-top: 20px
+}
+.display-card .card-btn{
+    padding: 11px 73px;
+    font-size: 24px;
+	line-height: 50px;
+	text-align: center;
+	background: #26A96C;
+	color: #ffffff;
+	margin: auto;
+	transition: all .4s linear;
+
+}
+
+@media(min-width:1200px){
+    .display-card .card-btn:hover{
+        border: 2px solid #26A96C;
+        color: #26A96C;
+        background: transparent;
+    }
+}
+
+@media(max-width: 1200px){
+    .tours{
+        padding: 25px 10rem 100px 10rem;
+    }
+    .tours .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 992px){
+    .tours{
+        padding: 25px 5rem 100px 5rem;
+    }
+}
+
+@media(max-width: 768px){
+    .tours{
+        padding: 25px 10px 100px 10px;
+    }
+}
+
+@media(max-width: 768px){
+    .tours{
+        padding: 25px 2rem 100px 2rem;
+    }
+
+    .tours .cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
