@@ -14,7 +14,7 @@ $(function(){
     $('#navToggle').click(function (event) {
         event.stopPropagation();
         event.preventDefault();
-        if ($(this).hasClass('open')) {
+        if ($('.content').hasClass('open')) {
             close();
             $('header').addClass('push')
         } else {
